@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +10,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 .nav {
@@ -17,13 +21,23 @@ body {
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  padding: 1rem;
-  background: #2489cd;
-  color: #fff;
+  background: #000000;
+  color: #d16a2a;
+  padding: 0.1rem;
 
   .logo {
-    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
+    background-image: url("../images/att-logo-1.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    padding: 1rem;
+    border-radius: 100%;
   }
 
   .logo:hover {
@@ -33,7 +47,7 @@ body {
 
   .link-container {
     display: none;
-    margin-right: 1rem;
+    margin-right: 2rem;
 
     @media (min-width: 768px) {
       display: block;
@@ -41,7 +55,7 @@ body {
 
     a {
       cursor: pointer;
-      color: #fff;
+      color: #d16a2a;
       text-decoration: none;
       margin-left: 2rem;
     }
@@ -50,6 +64,30 @@ body {
       transition: all 0.4s ease-in-out;
       transform: scale(1.1);
       color: #ffffff;
+    }
+  }
+
+  // ********CART BUTTON**********//
+  // *****************************//
+  // *****************************//
+
+  .cart-btn {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    color: #d16a2a;
+
+    a {
+      color: #d16a2a;
+      text-decoration: none;
+    }
+
+    i {
+      display: block;
+      color: #d16a2a;
     }
   }
 
@@ -64,6 +102,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 0.5rem;
+    cursor: pointer;
 
     @media (min-width: 768px) {
       display: none;
@@ -72,12 +111,60 @@ body {
     span {
       width: 30px;
       height: 2px;
-      background: #ffffff;
+      background: #d16a2a;
       margin-top: 0.3rem;
       border-radius: 5px;
     }
   }
+
+  // *************MOBILE NAV*************//
+  // ************************************//
+  // ************************************//
+
+  .mobile-nav {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    background: white;
+    left: 0;
+    top: 100%;
+    transition: left 0.4s ease-out;
+
+    &.show-mobile-nav {
+      display: block;
+      transition: left 0.4s ease-out;
+    }
+
+    >a {
+      position: relative;
+      display: flex;
+      text-decoration: none;
+      color: #d16a2a;
+      transition: all 0.04s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0.5px 0.5px 1.5px 0.5px #d16a2a;
+      background: #000000ee;
+      width: 100%;
+      padding: 0.7rem;
+      transition: left 0.4s ease-out;
+    }
+
+    >a:hover {
+      transform: scale(1.04);
+      transition: all 0.04s ease;
+      cursor: pointer;
+    }
+  }
+
 }
+
+
 
 .hero {
   position: relative;

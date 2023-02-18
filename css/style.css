@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +8,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 .nav {
@@ -17,13 +19,23 @@ body {
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  padding: 1rem;
-  background: #2489cd;
-  color: #fff;
+  background: #000000;
+  color: #d16a2a;
+  padding: 0.1rem;
 }
 .nav .logo {
-  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
+  background-image: url("../images/att-logo-1.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  padding: 1rem;
+  border-radius: 100%;
 }
 .nav .logo:hover {
   transition: all 0.4s ease-in-out;
@@ -31,7 +43,7 @@ body {
 }
 .nav .link-container {
   display: none;
-  margin-right: 1rem;
+  margin-right: 2rem;
 }
 @media (min-width: 768px) {
   .nav .link-container {
@@ -40,7 +52,7 @@ body {
 }
 .nav .link-container a {
   cursor: pointer;
-  color: #fff;
+  color: #d16a2a;
   text-decoration: none;
   margin-left: 2rem;
 }
@@ -49,6 +61,23 @@ body {
   transform: scale(1.1);
   color: #ffffff;
 }
+.nav .cart-btn {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  color: #d16a2a;
+}
+.nav .cart-btn a {
+  color: #d16a2a;
+  text-decoration: none;
+}
+.nav .cart-btn i {
+  display: block;
+  color: #d16a2a;
+}
 .nav .mobile-nav-btn {
   position: relative;
   display: flex;
@@ -56,6 +85,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 0.5rem;
+  cursor: pointer;
 }
 @media (min-width: 768px) {
   .nav .mobile-nav-btn {
@@ -65,9 +95,46 @@ body {
 .nav .mobile-nav-btn span {
   width: 30px;
   height: 2px;
-  background: #ffffff;
+  background: #d16a2a;
   margin-top: 0.3rem;
   border-radius: 5px;
+}
+.nav .mobile-nav {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  background: white;
+  left: 0;
+  top: 100%;
+  transition: left 0.4s ease-out;
+}
+.nav .mobile-nav.show-mobile-nav {
+  display: block;
+  transition: left 0.4s ease-out;
+}
+.nav .mobile-nav > a {
+  position: relative;
+  display: flex;
+  text-decoration: none;
+  color: #d16a2a;
+  transition: all 0.04s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0.5px 0.5px 1.5px 0.5px #d16a2a;
+  background: rgba(0, 0, 0, 0.9333333333);
+  width: 100%;
+  padding: 0.7rem;
+  transition: left 0.4s ease-out;
+}
+.nav .mobile-nav > a:hover {
+  transform: scale(1.04);
+  transition: all 0.04s ease;
+  cursor: pointer;
 }
 
 .hero {
