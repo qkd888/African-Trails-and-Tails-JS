@@ -93,6 +93,8 @@ const h2 = document.createElement("h2");
 const h5 = document.createElement("h5");
 const subBtn1 = document.createElement("button");
 const para=document.createElement("p");
+const sDBtn = document.createElement("down-button");
+
 
 heading.textContent="Welcome";
 h3.textContent = "To";
@@ -100,6 +102,9 @@ h2.textContent = "African";
 h5.textContent = "Trails & Tails"
 subBtn1.textContent = "Subscribe";
 para.textContent="From the mountains to the beaches, we've got it all covered on our travel channel..";
+sDBtn.textContent = "+";
+sDBtn.href = "#about-container";
+
 
 
 hero.appendChild(heading);
@@ -108,6 +113,8 @@ hero.appendChild(h2);
 hero.appendChild(h5);
 hero.appendChild(subBtn1);
 hero.appendChild(para);
+hero.appendChild(sDBtn);
+
 
 // *******************************//
 // *******************************//

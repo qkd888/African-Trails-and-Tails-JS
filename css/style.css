@@ -32,10 +32,11 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   padding: 1rem;
   border-radius: 100%;
+  margin-left: 1rem;
 }
 .nav .logo:hover {
   transition: all 0.4s ease-in-out;
@@ -200,6 +201,21 @@ body {
   text-align: center;
   line-height: 1rem;
   max-width: 400px;
+}
+
+down-button {
+  position: absolute;
+  cursor: pointer;
+  color: #d16a2a;
+  border: 0.5px solid #d16a2a;
+  border-radius: 100%;
+  padding: 0.1rem 0.5rem;
+  bottom: 25px;
+}
+
+down-button:hover {
+  transition: all 0.4 ease-in-out;
+  transform: scale(1.1);
 }
 
 .about-container {
