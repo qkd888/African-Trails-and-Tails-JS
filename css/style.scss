@@ -164,7 +164,11 @@ body {
 
 }
 
-
+// ************HERO**************//
+// ******************************//
+// ******************************//
+// ******************************//
+// ******************************//
 
 .hero {
   position: relative;
@@ -173,35 +177,69 @@ body {
   justify-content: center;
   align-items: center;
   padding: 0.5rem;
-  background: #032151;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.712), rgba(0, 0, 0, 0.788)),
+    url("../images/att-hero-1.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
   width: 100%;
   height: 100vh;
 
   h1 {
-    color: #e9e0e0;
-    text-align: center;
+    font-size: 2.5rem;
+    color: #d16a2a;
+    margin-top: -5rem;
   }
 
-  p {
-    text-align: center;
-    max-width: 400px;
-    margin-top: 2rem;
-    color: #e9e0e0;
+  h3 {
+    margin-top: -1rem;
+    color: #d16a2a;
+  }
+
+  h2 {
+    font-size: 4.5rem;
+    color: #d16a2a;
+    margin-top: -1rem;
+  }
+
+  h5 {
+    font-size: 2.6rem;
+    margin-top: -2rem;
+    color: #d16a2a;
   }
 
   button {
-    border: 0.5px solid black;
-    border-radius: 5px;
-    padding: 2px 5px;
-    margin-top: 2rem;
-    cursor: pointer;
+    margin-top: 1rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.4rem 0.6rem;
+    font-size: 1rem;
+    background: rgba(255, 0, 0, 0.432);
+    border: 0.5px solid rgb(255, 255, 255);
+    margin-top: 2.5rem;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
     transition: all 0.4s ease-in-out;
+    cursor: pointer;
   }
 
   button:hover {
+    transform: scale(1.05);
     transition: all 0.4s ease-in-out;
-    background: #000;
-    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.653);
+    background: rgb(255, 0, 0);
+    box-shadow: 2px 1.5px 8px 0.1px red;
+  }
+
+  p {
+    color: #d16a2a;
+    margin-top: 2rem;
+    text-align: center;
+    line-height: 1rem;
+    max-width: 400px;
   }
 }
 
