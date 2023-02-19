@@ -11,6 +11,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 
 .nav {
@@ -24,6 +25,8 @@ body {
   background: #000000;
   color: #d16a2a;
   padding: 0.1rem;
+  top: 0;
+  left: 0;
 
   .logo {
     display: flex;
@@ -139,31 +142,10 @@ body {
       display: block;
       transition: left 0.4s ease-out;
     }
-
-    >a {
-      position: relative;
-      display: flex;
-      text-decoration: none;
-      color: #d16a2a;
-      transition: all 0.04s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0.5px 0.5px 1.5px 0.5px #d16a2a;
-      background: #000000ee;
-      width: 100%;
-      padding: 0.7rem;
-      transition: left 0.4s ease-out;
-    }
-
-    >a:hover {
-      transform: scale(1.04);
-      transition: all 0.04s ease;
-      cursor: pointer;
-    }
   }
-
 }
+
+
 
 // ************HERO**************//
 // ******************************//
@@ -188,9 +170,9 @@ body {
   height: 100vh;
 
   h1 {
+    margin-top: -10rem;
     font-size: 2.5rem;
     color: #d16a2a;
-    margin-top: -5rem;
   }
 
   h3 {
@@ -211,7 +193,6 @@ body {
   }
 
   button {
-    margin-top: 1rem;
     position: relative;
     display: flex;
     justify-content: center;
@@ -242,22 +223,32 @@ body {
     line-height: 1rem;
     max-width: 400px;
   }
+
+  a {
+    position: absolute;
+    text-decoration: none;
+    cursor: pointer;
+    color: #d16a2a;
+    border: 0.5px solid #d16a2a;
+    border-radius: 100%;
+    padding: 0.1rem 0.5rem;
+    bottom: 25px;
+    transition: all 0.4 ease-in-out;
+  }
+
+  a:hover {
+    transition: all 0.4 ease-in-out;
+    transform: scale(1.10);
+  }
 }
 
-down-button {
-  position: absolute;
-  cursor: pointer;
-  color: #d16a2a;
-  border: 0.5px solid #d16a2a;
-  border-radius: 100%;
-  padding: 0.1rem 0.5rem;
-  bottom: 25px;
-}
 
-down-button:hover {
-  transition: all 0.4 ease-in-out;
-  transform: scale(1.1);
-}
+
+// ************ABOUT*************//
+// ******************************//
+// ******************************//
+// ******************************//
+// ******************************//
 
 .about-container {
   position: relative;
@@ -280,4 +271,29 @@ down-button:hover {
     text-align: center;
     margin-top: 1rem;
   }
+}
+
+// *********BACK TO TOP BTN***********//
+#back-to-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  font-size: 11px;
+  background-color: rgba(0, 0, 0, 0.727);
+  color: #d16a2a;
+  padding: 6px 11px;
+  border-radius: 5px;
+  border: 0.1px solid #d16a2a;
+  cursor: pointer;
+  z-index: 999999;
+  opacity: 0.7;
+  transition: all 0.4s ease-in-out;
+}
+
+#back-to-top-btn:hover {
+  transition: all 0.4s ease-in-out;
+  transform: scale(1.01);
+  background-color: rgb(0, 0, 0);
+  border: 0.1px solid rgb(0, 0, 0);
 }
