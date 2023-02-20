@@ -37,6 +37,8 @@ for (let i = 0; i < contentArray.length; i++) {
   mobileNavBtn.appendChild(span);
 }
 
+
+
 mobileNavBtn.addEventListener("click", () => {
   mobileNavBtn.classList.toggle("show-mobile-nav");
 
@@ -52,7 +54,20 @@ function onBodyClick(e) {
     mobileNavBtn.classList.remove("change");
     document.body.removeEventListener("click", onBodyClick);
   }
-}
+};
+
+mobileNavBtn.addEventListener("click", () => {
+  if (!mobileNavBtn.classList.contains("change")) {
+    mobileNavBtn.classList.toggle("change");
+    document.body.addEventListener("click", (e) => {
+      if (!mobileNavBtn.contains(e.target)) {
+        mobileNavBtn.classList.remove("change");
+      }
+    });
+  } else {
+    mobileNavBtn.classList.remove("change");
+  }
+});
 
 // ***********MOBILE NAV**********//
 // *******************************//
@@ -150,7 +165,7 @@ aboutUs.textContent = "About Us";
 aboutContainer.appendChild(aboutUs);
 const aboutPara = document.createElement("p");
 aboutPara.textContent =
-  "African Trails & Tails travel channel around South Africa! We are avid travelers, adventurers, and explorers. We love to document our travels and share them with others, and we can't think of a better place to explore than South Africa! On this travel channel, we will be sharing our journey through the diverse landscapes of South Africa. From the beautiful beaches of Cape Town to the majestic safari parks of the Northern Cape, we will be taking you with us to experience the culture, people, and natural wonders that South Africa has to offer. We will be visiting some of the most renowned tourist attractions, as well as exploring some of the lesser known gems of South Africa.  We will be sharing our experiences and stories with you, so that you too can experience the beauty and adventure of South Africa. Along the way, we will also be providing travel tips and advice to help make your own trips to South Africa a success So please, Subscribe to our Youtube Channel and join us on our journey and explore South Africa!";
+  "Welcome to African Trails & Tails WebShop and travel channel around South Africa! We are avid travelers, adventurers, and explorers. We love to document our travels and share them with others, and we can't think of a better place to explore than South Africa! On this travel channel, we will be sharing our journey through the diverse landscapes of South Africa. From the beautiful beaches of Cape Town to the majestic safari parks of the Northern Cape, we will be taking you with us to experience the culture, people, and natural wonders that South Africa has to offer. We will be visiting some of the most renowned tourist attractions, as well as exploring some of the lesser known gems of South Africa.  We will be sharing our experiences and stories with you, so that you too can experience the beauty and adventure of South Africa. Along the way, we will also be providing travel tips and advice to help make your own trips to South Africa a success So please, Subscribe to our Youtube Channel and join us on our journey and explore South Africa!";
 aboutContainer.appendChild(aboutPara);
 const scrollDownButton = document.getElementById('scrollDownButton');
 
@@ -179,3 +194,9 @@ backToTopBtn.addEventListener("click", function () {
     behavior: "smooth",
   });
 });
+
+// *******************************//
+// *******************************//
+// *****************************//// **********************************//
+// ********MOUSE ANIMATION********//
+

@@ -81,24 +81,35 @@ body {
   // *****************************//
 
   .cart-btn {
-    position: relative;
     display: flex;
+    flex-direction: flex-end;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    color: #d16a2a;
+    padding: 0.5rem;
 
     a {
       color: #d16a2a;
       text-decoration: none;
     }
 
+    a:hover {
+      transition: all 0.4s ease-in-out;
+      color: #ffffff;
+    }
+
     i {
       display: block;
       color: #d16a2a;
     }
+
+
+    i:hover {
+      transition: all 0.4s ease-in-out;
+      color: #ffffff;
+    }
   }
+
+
 
   // ***********MOBILE TOGGLE***********//
   // ***********************************//
@@ -110,7 +121,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0.5rem;
     cursor: pointer;
 
 
@@ -140,18 +150,18 @@ body {
       display: none;
     }
 
-    .change {
+    &.change {
       span {
         &:nth-child(2) {
           opacity: 0;
         }
 
         &:nth-child(1) {
-          transform: rotate(-45deg) translate(-9px, 8px);
+          transform: rotate(-50deg) translate(-9px, 8px);
         }
 
         &:nth-child(3) {
-          transform: rotate(45deg) translate(-9px, -8px);
+          transform: rotate(50deg) translate(-9px, -8px);
         }
       }
     }
@@ -326,6 +336,7 @@ body {
   width: 100%;
 
   h2 {
+    font-size: 2.5em;
     margin-top: 5rem;
     color: #fff;
   }
@@ -372,8 +383,16 @@ body {
     transition: all 0.4 ease-in-out;
     transform: scale(1.10);
   }
-
 }
+
+// ************VIDEOS*************//
+// ******************************//
+// ******************************//
+// ******************************//
+// ******************************//
+
+
+
 
 // *********BACK TO TOP BTN***********//
 #back-to-top-btn {
