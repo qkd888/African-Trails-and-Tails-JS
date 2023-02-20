@@ -26,6 +26,7 @@ for (let i = 0; i < linkText.length; i++) {
 }
 
 // ****************************************//
+// ****************************************//
 // MOBILE NAV BTN//
 
 const mobileNavBtn = document.querySelector(".mobile-nav-btn");
@@ -36,11 +37,10 @@ for (let i = 0; i < contentArray.length; i++) {
   mobileNavBtn.appendChild(span);
 }
 
-mobileNavBtn.addEventListener("click", (e) => {
-  e.stopPropagation();
-  mobileNavBtn.classList.toggle("change");
+mobileNavBtn.addEventListener("click", () => {
+  mobileNavBtn.classList.toggle("show-mobile-nav");
 
-  if (mobileNavBtn.classList.contains("change")) {
+  if (mobileNavBtn.classList.contains("show-mobile-nav")) {
     document.body.addEventListener("click", onBodyClick);
   } else {
     document.body.removeEventListener("click", onBodyClick);
@@ -66,13 +66,24 @@ function createMobileNavLinks(mobileArray, hrefArray) {
     linksHtml += `<a href="${hrefArray[i]}">${mobileArray[i]}</a>`;
   }
 
+  // Set the HTML of the mobile nav element to the linksHtml string
   mbNav.innerHTML = linksHtml;
+
+  // Add event listeners to mobile nav links to close the mobile nav
+  const mbNavLinks = document.querySelectorAll(".mobile-nav a");
+  mbNavLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      mbNav.classList.remove("show-mobile-nav");
+    });
+  });
 }
 
 // Attach event listener to mobileNavBtn
 mobileNavBtn.addEventListener("click", () => {
-  console.log("nav click");
-  mobileNavBtn.classList.toggle("show-mobile-nav");
+  const mbNav = document.querySelector(".mobile-nav");
+
+  // Toggle the "show-mobile-nav" class on the mobile nav element
+  mbNav.classList.toggle("show-mobile-nav");
 });
 
 // Create mobile nav links
@@ -83,10 +94,21 @@ createMobileNavLinks(mobileArray, hrefArray);
 
 // Attach event listener to document body to close mobile nav on click outside
 document.body.addEventListener("click", (e) => {
-  if (!mobileNavBtn.contains(e.target)) {
-    mobileNavBtn.classList.remove("show-mobile-nav");
+  const mbNav = document.querySelector(".mobile-nav");
+
+  // Check if the clicked element is inside the mobile nav element or the mobile nav button
+  if (!mbNav.contains(e.target) && !mobileNavBtn.contains(e.target)) {
+    // Remove the "show-mobile-nav" class from the mobile nav element
+    mbNav.classList.remove("show-mobile-nav");
   }
 });
+
+
+
+
+
+
+
 
 // HERO***************************//
 // *******************************//
@@ -100,7 +122,6 @@ const h2 = document.createElement("h2");
 const h5 = document.createElement("h5");
 const subBtn1 = document.createElement("button");
 const para = document.createElement("p");
-const sDBtn = document.createElement("a");
 
 heading.textContent = "Welcome";
 h3.textContent = "To";
@@ -109,9 +130,6 @@ h5.textContent = "Trails & Tails";
 subBtn1.textContent = "Subscribe";
 para.textContent =
   "From the mountains to the beaches, we've got it all covered on our travel channel..";
-sDBtn.textContent = "+";
-sDBtn.href = "#about";
-sDBtn.class = "scroll-down-button";
 
 hero.appendChild(heading);
 hero.appendChild(h3);
@@ -119,7 +137,6 @@ hero.appendChild(h2);
 hero.appendChild(h5);
 hero.appendChild(subBtn1);
 hero.appendChild(para);
-hero.appendChild(sDBtn);
 
 // *******************************//
 // *******************************//
@@ -135,6 +152,11 @@ const aboutPara = document.createElement("p");
 aboutPara.textContent =
   "African Trails & Tails travel channel around South Africa! We are avid travelers, adventurers, and explorers. We love to document our travels and share them with others, and we can't think of a better place to explore than South Africa! On this travel channel, we will be sharing our journey through the diverse landscapes of South Africa. From the beautiful beaches of Cape Town to the majestic safari parks of the Northern Cape, we will be taking you with us to experience the culture, people, and natural wonders that South Africa has to offer. We will be visiting some of the most renowned tourist attractions, as well as exploring some of the lesser known gems of South Africa.  We will be sharing our experiences and stories with you, so that you too can experience the beauty and adventure of South Africa. Along the way, we will also be providing travel tips and advice to help make your own trips to South Africa a success So please, Subscribe to our Youtube Channel and join us on our journey and explore South Africa!";
 aboutContainer.appendChild(aboutPara);
+const scrollDownButton = document.getElementById('scrollDownButton');
+
+scrollDownButton.addEventListener('click', () => {
+  window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
+});
 
 // *******************************//
 // *******************************//

@@ -168,7 +168,6 @@ body {
     width: 100%;
     justify-content: center;
     align-items: center;
-    background: white;
     left: 0;
     top: 100%;
     transition: all 0.4s ease-out;
@@ -354,6 +353,26 @@ body {
     transition: all 0.4 ease-in-out;
     transform: scale(1.10);
   }
+
+  #scrollDownButton {
+    position: fixed;
+    bottom: 20px;
+    position: center center;
+    z-index: 1;
+    padding: 10px;
+    background: none;
+    color: #d16a2a;
+    border: 0.5px solid #d16a2a;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: all 0.4 ease-in-out;
+  }
+
+  #scrollDownButton:hover {
+    transition: all 0.4 ease-in-out;
+    transform: scale(1.10);
+  }
+
 }
 
 // *********BACK TO TOP BTN***********//
