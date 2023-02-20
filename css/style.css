@@ -5,6 +5,7 @@
 }
 
 html {
+  position: relative;
   scroll-behavior: smooth;
 }
 
@@ -13,37 +14,37 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  scroll-behavior: smooth;
 }
 
 .nav {
   position: relative;
-  width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-content: space-between;
   flex-direction: row;
-  background: #000000;
-  color: #d16a2a;
-  padding: 0.1rem;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: fixed;
+  background: rgb(0, 0, 0);
+  justify-content: space-around;
   top: 0;
   left: 0;
+  z-index: 1;
 }
 .nav .logo {
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  text-decoration: none;
   background-image: url("../images/att-logo-1.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  width: 30px;
-  height: 30px;
-  padding: 1rem;
-  border-radius: 100%;
-  margin-left: 1rem;
+  width: 45px;
+  height: 45px;
+  padding: 0.1rem;
+  margin-right: 6rem;
 }
 .nav .logo:hover {
   transition: all 0.4s ease-in-out;
@@ -95,17 +96,36 @@ body {
   padding: 0.5rem;
   cursor: pointer;
 }
-@media (min-width: 768px) {
-  .nav .mobile-nav-btn {
-    display: none;
-  }
-}
 .nav .mobile-nav-btn span {
   width: 30px;
   height: 2px;
   background: #d16a2a;
   margin-top: 0.3rem;
   border-radius: 5px;
+  transition: 0.4s;
+}
+.nav .mobile-nav-btn span:nth-child(2) {
+  opacity: 1;
+}
+.nav .mobile-nav-btn span:nth-child(1) {
+  transform: rotate(0);
+}
+.nav .mobile-nav-btn span:nth-child(3) {
+  transform: rotate(0);
+}
+@media (min-width: 768px) {
+  .nav .mobile-nav-btn {
+    display: none;
+  }
+}
+.nav .mobile-nav-btn .change span:nth-child(2) {
+  opacity: 0;
+}
+.nav .mobile-nav-btn .change span:nth-child(1) {
+  transform: rotate(-45deg) translate(-9px, 8px);
+}
+.nav .mobile-nav-btn .change span:nth-child(3) {
+  transform: rotate(45deg) translate(-9px, -8px);
 }
 .nav .mobile-nav {
   position: absolute;
@@ -114,15 +134,36 @@ body {
   width: 100%;
   justify-content: center;
   align-items: center;
-  display: none;
   background: white;
   left: 0;
   top: 100%;
-  transition: left 0.4s ease-out;
+  transition: all 0.4s ease-out;
+  display: none;
+  /* Hide the menu by default */
 }
 .nav .mobile-nav.show-mobile-nav {
   display: block;
+  /* Show the menu when the class is added */
+  transition: all 0.4s ease-out;
+}
+.nav .mobile-nav a {
+  position: relative;
+  display: flex;
+  text-decoration: none;
+  color: #d16a2a;
+  transition: all 0.04s ease;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0.5px 0.5px 1.5px 0.5px #d16a2a;
+  background: rgba(0, 0, 0, 0.9333333333);
+  width: 100%;
+  padding: 0.7rem;
   transition: left 0.4s ease-out;
+}
+.nav .mobile-nav a:hover {
+  transform: scale(1.04);
+  transition: all 0.04s ease;
+  cursor: pointer;
 }
 
 .hero {
@@ -131,17 +172,17 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0.5rem;
   background-image: linear-gradient(rgba(0, 0, 0, 0.712), rgba(0, 0, 0, 0.788)), url("../images/att-hero-1.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  overflow: hidden;
   background-attachment: fixed;
   width: 100%;
   height: 100vh;
 }
 .hero h1 {
-  margin-top: -10rem;
+  margin-top: 1rem;
   font-size: 2.5rem;
   color: #d16a2a;
 }
@@ -210,12 +251,17 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  padding: 0.1rem;
+  padding-bottom: 5rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.423), rgba(0, 0, 0, 0.614)), url("../images/att-logo-1.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
   width: 100%;
-  height: 100vh;
-  padding: 1rem;
-  background: #000;
 }
 .about-container h2 {
+  margin-top: 5rem;
   color: #fff;
 }
 .about-container p {
@@ -223,6 +269,21 @@ body {
   max-width: 500px;
   text-align: center;
   margin-top: 1rem;
+}
+.about-container a {
+  position: absolute;
+  text-decoration: none;
+  cursor: pointer;
+  color: #d16a2a;
+  border: 0.5px solid #d16a2a;
+  border-radius: 100%;
+  padding: 0.1rem 0.5rem;
+  bottom: 25px;
+  transition: all 0.4 ease-in-out;
+}
+.about-container a:hover {
+  transition: all 0.4 ease-in-out;
+  transform: scale(1.1);
 }
 
 #back-to-top-btn {
