@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
-
 * {
   margin: 0;
   padding: 0;
@@ -28,6 +27,7 @@ body {
   position: fixed;
   background: rgb(0, 0, 0);
   justify-content: space-around;
+  padding: 0.5rem;
   top: 0;
   left: 0;
   z-index: 1;
@@ -67,6 +67,7 @@ body {
       color: #d16a2a;
       text-decoration: none;
       margin-left: 2rem;
+      font-size: 0.7rem;
     }
 
     >a:hover {
@@ -102,14 +103,11 @@ body {
       color: #d16a2a;
     }
 
-
     i:hover {
       transition: all 0.4s ease-in-out;
       color: #ffffff;
     }
   }
-
-
 
   // ***********MOBILE TOGGLE***********//
   // ***********************************//
@@ -122,8 +120,7 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-
-
+    padding: 0.5rem;
 
     span {
       width: 30px;
@@ -150,6 +147,7 @@ body {
       display: none;
     }
 
+    // *************PSUDO CLASS**************//
     &.change {
       span {
         &:nth-child(2) {
@@ -157,11 +155,11 @@ body {
         }
 
         &:nth-child(1) {
-          transform: rotate(-50deg) translate(-9px, 8px);
+          transform: rotate(-500deg) translate(-6px, 5px);
         }
 
         &:nth-child(3) {
-          transform: rotate(50deg) translate(-9px, -8px);
+          transform: rotate(500deg) translate(-2px, -10px);
         }
       }
     }
@@ -211,10 +209,7 @@ body {
       cursor: pointer;
     }
   }
-
 }
-
-
 
 // ************HERO**************//
 // ******************************//
@@ -307,11 +302,9 @@ body {
 
   a:hover {
     transition: all 0.4 ease-in-out;
-    transform: scale(1.10);
+    transform: scale(1.1);
   }
 }
-
-
 
 // ************ABOUT*************//
 // ******************************//
@@ -335,15 +328,19 @@ body {
   background-size: cover;
   width: 100%;
 
+  @media (min-width: 768px) {
+    height: 100vh;
+  }
+
   h2 {
     font-size: 2.5em;
-    margin-top: 5rem;
+    margin-top: 3.5rem;
     color: #fff;
   }
 
   p {
     color: #fff;
-    max-width: 500px;
+    max-width: 800px;
     text-align: center;
     margin-top: 1rem;
   }
@@ -362,7 +359,7 @@ body {
 
   a:hover {
     transition: all 0.4 ease-in-out;
-    transform: scale(1.10);
+    transform: scale(1.1);
   }
 
   #scrollDownButton {
@@ -381,7 +378,7 @@ body {
 
   #scrollDownButton:hover {
     transition: all 0.4 ease-in-out;
-    transform: scale(1.10);
+    transform: scale(1.1);
   }
 }
 
@@ -391,8 +388,69 @@ body {
 // ******************************//
 // ******************************//
 
+.vidoes {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: #000000;
 
+  h3 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #e6e1e1;
+    margin-top: 1.5rem;
+  }
 
+  p {
+    text-align: center;
+    position: relative;
+    max-width: 800px;
+    color: #e6e1e1;
+  }
+
+  .vid-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+
+    a {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      margin: 1rem;
+      max-width: 400px;
+      border-radius: 10px;
+      color: #ffff;
+      padding: 1rem;
+    }
+
+    iframe {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgb(255, 255, 255);
+      padding: 0.1rem;
+      border-radius: 10px;
+      box-shadow: 0.5px 0.5px 8px 2px white;
+    }
+
+    label {
+      text-align: center;
+      color: rgb(160, 160, 243);
+      max-width: 400px;
+    }
+  }
+}
 
 // *********BACK TO TOP BTN***********//
 #back-to-top-btn {

@@ -26,6 +26,7 @@ body {
   position: fixed;
   background: rgb(0, 0, 0);
   justify-content: space-around;
+  padding: 0.5rem;
   top: 0;
   left: 0;
   z-index: 1;
@@ -64,6 +65,7 @@ body {
   color: #d16a2a;
   text-decoration: none;
   margin-left: 2rem;
+  font-size: 0.7rem;
 }
 .nav .link-container > a:hover {
   transition: all 0.4s ease-in-out;
@@ -100,6 +102,7 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  padding: 0.5rem;
 }
 .nav .mobile-nav-btn span {
   width: 30px;
@@ -127,10 +130,10 @@ body {
   opacity: 0;
 }
 .nav .mobile-nav-btn.change span:nth-child(1) {
-  transform: rotate(-50deg) translate(-9px, 8px);
+  transform: rotate(-500deg) translate(-6px, 5px);
 }
 .nav .mobile-nav-btn.change span:nth-child(3) {
-  transform: rotate(50deg) translate(-9px, -8px);
+  transform: rotate(500deg) translate(-2px, -10px);
 }
 .nav .mobile-nav {
   position: absolute;
@@ -264,14 +267,19 @@ body {
   background-size: cover;
   width: 100%;
 }
+@media (min-width: 768px) {
+  .about-container {
+    height: 100vh;
+  }
+}
 .about-container h2 {
   font-size: 2.5em;
-  margin-top: 5rem;
+  margin-top: 3.5rem;
   color: #fff;
 }
 .about-container p {
   color: #fff;
-  max-width: 500px;
+  max-width: 800px;
   text-align: center;
   margin-top: 1rem;
 }
@@ -306,6 +314,64 @@ body {
 .about-container #scrollDownButton:hover {
   transition: all 0.4 ease-in-out;
   transform: scale(1.1);
+}
+
+.vidoes {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: #000000;
+}
+.vidoes h3 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #e6e1e1;
+  margin-top: 1.5rem;
+}
+.vidoes p {
+  text-align: center;
+  position: relative;
+  max-width: 800px;
+  color: #e6e1e1;
+}
+.vidoes .vid-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+.vidoes .vid-container a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  margin: 1rem;
+  max-width: 400px;
+  border-radius: 10px;
+  color: white;
+  padding: 1rem;
+}
+.vidoes .vid-container iframe {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(255, 255, 255);
+  padding: 0.1rem;
+  border-radius: 10px;
+  box-shadow: 0.5px 0.5px 8px 2px white;
+}
+.vidoes .vid-container label {
+  text-align: center;
+  color: rgb(160, 160, 243);
+  max-width: 400px;
 }
 
 #back-to-top-btn {

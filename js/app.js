@@ -198,5 +198,20 @@ backToTopBtn.addEventListener("click", function () {
 // *******************************//
 // *******************************//
 // *****************************//// **********************************//
-// ********MOUSE ANIMATION********//
+// ************VIDOES*************//
+const vidoes = document.querySelector(".videos");
+const vidh3 = document.querySelector(".vidh3");
+vidh3.textContent ="Our Videos";
+const vContainerPara = document.querySelector(".v-container-para");
+vContainerPara.textContent ="Welcome to our Videos, where we take you on an adventure throughout South Africa! From the breathtaking landscapes of the Garden Route to the rich indigenous forrests and mountains of the Easter Cape, We'll show you the beauty and excitement that this country has to offer. We strive to capture the unique culture and history of this amazing country, so join us on this journey. With our videos, you'll get an up-close look at the diverse sights, sounds and experiences that South Africa has to offer. So, don't miss out and subscribe now to stay updated on all the amazing places we visit and experiences we have!";
+
+
+
+
+const vidContainer = document.querySelector(".vid-container");
+
+
+vidoes.appendChild(vContainerPara);
+vidoes.appendChild(vidh3);
+
 
