@@ -374,6 +374,445 @@ body {
   max-width: 400px;
 }
 
+.shop-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: rgb(216, 42, 42);
+  width: 100%;
+  margin: 0;
+}
+.shop-container .header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 1rem;
+  color: #f7f0ec;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.925), rgba(0, 0, 0, 0.884)), url("../images/att-hero-1.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+}
+.shop-container .header h1 {
+  color: rgb(255, 255, 255);
+  margin-top: 6rem;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 1.9rem;
+}
+@media (min-width: 768px) {
+  .shop-container .header h1 {
+    font-size: 2rem;
+    max-width: 400px;
+  }
+}
+.shop-container .header .btn-container {
+  margin-top: 1rem;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.shop-container .header .btn-container .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border: 1px solid #ffffff;
+  border-radius: 15px;
+  outline: none;
+  padding: 3px 5px;
+  background: none;
+  cursor: pointer;
+  font-size: 18px;
+  text-decoration: none;
+  color: #fff;
+  margin: 0.5rem;
+  transition: all 0.4s ease-in-out;
+}
+.shop-container .header .btn-container .btn:hover {
+  transition: all 0.4s ease-in-out;
+  background-color: #ffffff;
+  color: black;
+}
+.shop-container .header .btn-container .btn.active {
+  background-color: #666;
+  color: white;
+}
+.shop-container .hoodie-container {
+  background: rgb(0, 0, 0);
+  width: 100%;
+  padding: 1rem;
+}
+.shop-container .hoodie-container .text-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #000000;
+}
+.shop-container .hoodie-container .text-box h1 {
+  color: white;
+  margin-top: 6rem;
+}
+.shop-container .hoodie-container .text-box p {
+  color: white;
+  max-width: 800px;
+}
+.shop-container .hoodie-container .item-container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.shop-container .hoodie-container .item-container .item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(0, 0, 0);
+  padding: 0.5rem;
+  width: 250px;
+  border-radius: 5px;
+  margin: 1rem;
+}
+.shop-container .hoodie-container .item-container .item img {
+  width: 100%;
+}
+.shop-container .hoodie-container .item-container .item label {
+  position: relative;
+  color: white;
+  padding: 0.5rem;
+}
+.shop-container .hoodie-container .item-container .item .add-to-cart-btn {
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  max-width: 100px;
+  padding: 0.2rem;
+  transition: all 0.4s ease-in-out;
+}
+.shop-container .hoodie-container .item-container .item .add-to-cart-btn:hover {
+  transition: all 0.4s ease-in-out;
+  color: #fff;
+  background: #000;
+}
+.shop-container .hoodie-container h1 {
+  color: white;
+  margin-top: 6rem;
+}
+.shop-container .hoodie-container p {
+  color: white;
+  max-width: 45%;
+}
+.shop-container .hoodie-container .item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(0, 0, 0);
+  padding: 0.5rem;
+  width: 250px;
+  border-radius: 5px;
+  margin: 1rem;
+}
+.shop-container .hoodie-container .item img {
+  width: 100%;
+}
+.shop-container .hoodie-container .item label {
+  position: relative;
+  color: white;
+  background: #000;
+  padding: 0.5rem;
+}
+.shop-container .hoodie-container .item .add-to-cart-btn {
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  max-width: 100px;
+}
+.shop-container .tee-shirt-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  display: block;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  justify-content: center;
+  padding: 0.5rem;
+  background: rgb(0, 0, 0);
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .shop-container .tee-shirt-container {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+}
+.shop-container .tee-shirt-container .text-box {
+  background: #000;
+}
+.shop-container .tee-shirt-container .text-box h1 {
+  color: white;
+  margin-top: 6rem;
+}
+.shop-container .tee-shirt-container .text-box p {
+  color: white;
+  min-width: 250px;
+}
+.shop-container .tee-shirt-container .text-box .item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(0, 0, 0);
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin: 1rem;
+}
+.shop-container .tee-shirt-container .text-box .item img {
+  width: 100%;
+}
+.shop-container .tee-shirt-container .text-box .item label {
+  position: relative;
+  color: white;
+  background: #000;
+  padding: 0.5rem;
+}
+.shop-container .tee-shirt-container .text-box .item .add-to-cart-btn {
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  max-width: 100px;
+}
+.shop-container .tee-shirt-container h1 {
+  color: white;
+  margin-top: 6rem;
+}
+.shop-container .tee-shirt-container p {
+  color: white;
+  max-width: 45%;
+}
+.shop-container .tee-shirt-container .item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(0, 0, 0);
+  padding: 0.5rem;
+  width: 250px;
+  border-radius: 5px;
+  margin: 1rem;
+}
+.shop-container .tee-shirt-container .item img {
+  width: 100%;
+}
+.shop-container .tee-shirt-container .item label {
+  position: relative;
+  color: white;
+  background: #000;
+  padding: 0.5rem;
+}
+.shop-container .tee-shirt-container .item .add-to-cart-btn {
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  max-width: 100px;
+}
+.shop-container .caps-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  display: block;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  justify-content: center;
+  padding: 0.5rem;
+  background: rgb(0, 0, 0);
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .shop-container .caps-container {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+}
+.shop-container .caps-container .text-box {
+  background: #000;
+}
+.shop-container .caps-container .text-box h1 {
+  color: white;
+  margin-top: 6rem;
+}
+.shop-container .caps-container .text-box p {
+  color: white;
+  max-width: 800px;
+}
+.shop-container .caps-container .text-box .item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(0, 0, 0);
+  padding: 0.5rem;
+  width: 250px;
+  border-radius: 5px;
+  margin: 1rem;
+}
+.shop-container .caps-container .text-box .item img {
+  width: 100%;
+}
+.shop-container .caps-container .text-box .item label {
+  position: relative;
+  color: white;
+  background: #000;
+  padding: 0.5rem;
+}
+.shop-container .caps-container .text-box .item .add-to-cart-btn {
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  max-width: 100px;
+}
+.shop-container .bandannas-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  display: block;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  justify-content: center;
+  padding: 0.5rem;
+  background: rgb(0, 0, 0);
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .shop-container .bandannas-container {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+}
+.shop-container .bandannas-container .text-box {
+  background: #000;
+}
+.shop-container .bandannas-container .text-box h1 {
+  color: white;
+  margin-top: 6rem;
+}
+.shop-container .bandannas-container .text-box p {
+  color: white;
+  max-width: 800px;
+}
+.shop-container .bandannas-container .text-box .item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(0, 0, 0);
+  padding: 0.5rem;
+  width: 250px;
+  border-radius: 5px;
+  margin: 1rem;
+}
+.shop-container .bandannas-container .text-box .item img {
+  width: 100%;
+}
+.shop-container .bandannas-container .text-box .item label {
+  position: relative;
+  color: white;
+  background: #000;
+  padding: 0.5rem;
+}
+.shop-container .bandannas-container .text-box .item .add-to-cart-btn {
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  max-width: 100px;
+}
+.shop-container .gifts-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  display: block;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  justify-content: center;
+  padding: 0.5rem;
+  background: rgb(0, 0, 0);
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .shop-container .gifts-container {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+}
+.shop-container .gifts-container .text-box {
+  background: #000;
+}
+.shop-container .gifts-container .text-box h1 {
+  color: white;
+  margin-top: 6rem;
+}
+.shop-container .gifts-container .text-box p {
+  color: white;
+  max-width: 800px;
+}
+.shop-container .gifts-container .text-box .item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(0, 0, 0);
+  padding: 0.5rem;
+  width: 250px;
+  border-radius: 5px;
+  margin: 1rem;
+}
+.shop-container .gifts-container .text-box .item img {
+  width: 100%;
+}
+.shop-container .gifts-container .text-box .item label {
+  position: relative;
+  color: white;
+  background: #000;
+  padding: 0.5rem;
+}
+.shop-container .gifts-container .text-box .item .add-to-cart-btn {
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  max-width: 100px;
+}
+
 #back-to-top-btn {
   position: fixed;
   bottom: 20px;

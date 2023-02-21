@@ -452,6 +452,518 @@ body {
   }
 }
 
+// **********SHOP***********//
+// *********************//
+// *********************//
+// *********************//
+
+.shop-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: rgb(216, 42, 42);
+  width: 100%;
+  margin: 0;
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 1rem;
+    color: #f7f0ec;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.925),
+        rgba(0, 0, 0, 0.884)),
+      url("../images/att-hero-1.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+
+    h1 {
+      color: rgb(255, 255, 255);
+      margin-top: 6rem;
+      text-align: center;
+      font-size: 1.5rem;
+      line-height: 1.9rem;
+
+      @media (min-width: 768px) {
+        font-size: 2rem;
+        max-width: 400px;
+      }
+    }
+
+    .btn-container {
+      margin-top: 1rem;
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+
+      .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        border: 1px solid #ffffff;
+        border-radius: 15px;
+        outline: none;
+        padding: 3px 5px;
+        background: none;
+        cursor: pointer;
+        font-size: 18px;
+        text-decoration: none;
+        color: #fff;
+        margin: 0.5rem;
+        transition: all 0.4s ease-in-out;
+      }
+
+      .btn:hover {
+        transition: all 0.4s ease-in-out;
+        background-color: #ffffff;
+        color: black;
+      }
+
+      .btn.active {
+        background-color: #666;
+        color: white;
+      }
+    }
+  }
+
+  //*********HOODIES***********//
+  //***************************//
+  .hoodie-container {
+    background: rgb(0, 0, 0);
+    width: 100%;
+    padding: 1rem;
+
+    .text-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: #000000;
+
+      h1 {
+        color: white;
+        margin-top: 6rem;
+      }
+
+      p {
+        color: white;
+        max-width: 800px;
+      }
+    }
+
+    .item-container {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+
+      .item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgb(0, 0, 0);
+        padding: 0.5rem;
+        width: 250px;
+        border-radius: 5px;
+        margin: 1rem;
+
+        img {
+          width: 100%;
+        }
+
+        label {
+          position: relative;
+          color: white;
+          padding: 0.5rem;
+        }
+
+        .add-to-cart-btn {
+          color: rgb(0, 0, 0);
+          border-radius: 5px;
+          margin-top: 0.5rem;
+          cursor: pointer;
+          max-width: 100px;
+          padding: 0.2rem;
+          transition: all 0.4s ease-in-out;
+        }
+
+        .add-to-cart-btn:hover {
+          transition: all 0.4s ease-in-out;
+          color: #fff;
+          background: #000;
+        }
+      }
+    }
+
+    h1 {
+      color: white;
+      margin-top: 6rem;
+    }
+
+    p {
+      color: white;
+      max-width: 45%;
+    }
+
+    .item {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: rgb(0, 0, 0);
+      padding: 0.5rem;
+      width: 250px;
+      border-radius: 5px;
+      margin: 1rem;
+
+      img {
+        width: 100%;
+      }
+
+      label {
+        position: relative;
+        color: white;
+        background: #000;
+        padding: 0.5rem;
+      }
+
+      .add-to-cart-btn {
+        color: rgb(0, 0, 0);
+        border-radius: 5px;
+        margin-top: 0.5rem;
+        cursor: pointer;
+        max-width: 100px;
+      }
+    }
+  }
+
+  //*********TEE SHIRTS*********//
+  //***************************//
+  .tee-shirt-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-content: center;
+    padding: 0.5rem;
+    background: rgb(0, 0, 0);
+    width: 100%;
+
+    @media (min-width: 768px) {
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+
+    .text-box {
+      background: #000;
+
+      h1 {
+        color: white;
+        margin-top: 6rem;
+      }
+
+      p {
+        color: white;
+        min-width: 250px;
+      }
+
+      .item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgb(0, 0, 0);
+        padding: 0.5rem;
+        border-radius: 5px;
+        margin: 1rem;
+
+        img {
+          width: 100%;
+        }
+
+        label {
+          position: relative;
+          color: white;
+          background: #000;
+          padding: 0.5rem;
+        }
+
+        .add-to-cart-btn {
+          color: rgb(0, 0, 0);
+          border-radius: 5px;
+          margin-top: 0.5rem;
+          cursor: pointer;
+          max-width: 100px;
+        }
+      }
+    }
+
+    h1 {
+      color: white;
+      margin-top: 6rem;
+    }
+
+    p {
+      color: white;
+      max-width: 45%;
+    }
+
+    .item {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: rgb(0, 0, 0);
+      padding: 0.5rem;
+      width: 250px;
+      border-radius: 5px;
+      margin: 1rem;
+
+      img {
+        width: 100%;
+      }
+
+      label {
+        position: relative;
+        color: white;
+        background: #000;
+        padding: 0.5rem;
+      }
+
+      .add-to-cart-btn {
+        color: rgb(0, 0, 0);
+        border-radius: 5px;
+        margin-top: 0.5rem;
+        cursor: pointer;
+        max-width: 100px;
+      }
+    }
+  }
+
+  //*********CAPS***********//
+  //***************************//
+  .caps-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-content: center;
+    padding: 0.5rem;
+    background: rgb(0, 0, 0);
+    width: 100%;
+
+    @media (min-width: 768px) {
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+
+    .text-box {
+      background: #000;
+
+      h1 {
+        color: white;
+        margin-top: 6rem;
+      }
+
+      p {
+        color: white;
+        max-width: 800px;
+      }
+
+      .item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgb(0, 0, 0);
+        padding: 0.5rem;
+        width: 250px;
+        border-radius: 5px;
+        margin: 1rem;
+
+        img {
+          width: 100%;
+        }
+
+        label {
+          position: relative;
+          color: white;
+          background: #000;
+          padding: 0.5rem;
+        }
+
+        .add-to-cart-btn {
+          color: rgb(0, 0, 0);
+          border-radius: 5px;
+          margin-top: 0.5rem;
+          cursor: pointer;
+          max-width: 100px;
+        }
+      }
+    }
+  }
+
+  //*********BANDANNAS***********//
+  //***************************//
+  .bandannas-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-content: center;
+    padding: 0.5rem;
+    background: rgb(0, 0, 0);
+    width: 100%;
+
+    @media (min-width: 768px) {
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+
+    .text-box {
+      background: #000;
+
+      h1 {
+        color: white;
+        margin-top: 6rem;
+      }
+
+      p {
+        color: white;
+        max-width: 800px;
+      }
+
+      .item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgb(0, 0, 0);
+        padding: 0.5rem;
+        width: 250px;
+        border-radius: 5px;
+        margin: 1rem;
+
+        img {
+          width: 100%;
+        }
+
+        label {
+          position: relative;
+          color: white;
+          background: #000;
+          padding: 0.5rem;
+        }
+
+        .add-to-cart-btn {
+          color: rgb(0, 0, 0);
+          border-radius: 5px;
+          margin-top: 0.5rem;
+          cursor: pointer;
+          max-width: 100px;
+        }
+      }
+    }
+  }
+
+  //*********gifts***********//
+  //***************************//
+  .gifts-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-content: center;
+    padding: 0.5rem;
+    background: rgb(0, 0, 0);
+    width: 100%;
+
+    @media (min-width: 768px) {
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+
+    .text-box {
+      background: #000;
+
+      h1 {
+        color: white;
+        margin-top: 6rem;
+      }
+
+      p {
+        color: white;
+        max-width: 800px;
+      }
+
+      .item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgb(0, 0, 0);
+        padding: 0.5rem;
+        width: 250px;
+        border-radius: 5px;
+        margin: 1rem;
+
+        img {
+          width: 100%;
+        }
+
+        label {
+          position: relative;
+          color: white;
+          background: #000;
+          padding: 0.5rem;
+        }
+
+        .add-to-cart-btn {
+          color: rgb(0, 0, 0);
+          border-radius: 5px;
+          margin-top: 0.5rem;
+          cursor: pointer;
+          max-width: 100px;
+        }
+      }
+    }
+  }
+}
+
+
 // *********BACK TO TOP BTN***********//
 #back-to-top-btn {
   position: fixed;
