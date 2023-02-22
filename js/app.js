@@ -23,7 +23,9 @@ for (let i = 0; i < linkText.length; i++) {
   link.textContent = linkText[i] + " | ";
   link.setAttribute("href", hrefValues[i]);
   linkContainer.appendChild(link);
-}
+};
+
+
 
 // ****************************************//
 // ****************************************//
@@ -211,8 +213,7 @@ vContainerPara.textContent ="Welcome to our Videos, where we take you on an adve
 const vidContainer = document.querySelector(".vid-container");
 
 
-vidoes.appendChild(vContainerPara);
-vidoes.appendChild(vidh3);
+
 
 
 // *******************************//
@@ -220,6 +221,17 @@ vidoes.appendChild(vidh3);
 // *****************************//// **********************************//
 // **************SHOP*************//
 
+const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+const cartCount = document.querySelector('.cart-count');
+
+let count = 0;
+
+addToCartButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    count++;
+    cartCount.innerHTML = count;
+  });
+});
 
 
 

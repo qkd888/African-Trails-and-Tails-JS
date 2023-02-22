@@ -335,7 +335,7 @@ body {
 .vidoes p {
   text-align: center;
   position: relative;
-  max-width: 800px;
+  max-width: 1200px;
   color: #e6e1e1;
 }
 .vidoes .vid-container {
@@ -400,7 +400,6 @@ body {
 }
 .shop-container .header h1 {
   color: rgb(255, 255, 255);
-  margin-top: 6rem;
   text-align: center;
   font-size: 1.5rem;
   line-height: 1.9rem;
